@@ -1,4 +1,4 @@
-# LBP-Front - Nuestra Web https://admanser.github.io/LBP-Front/
+# LBP-Front - Nuestra Web https://admanser.github.io/Nuevo/
 
 - El sitio web debe poseer al menos 4 páginas HTML o 4 secciones
 si se trata de un sitio One Page.
