@@ -1,0 +1,165 @@
+.shopPage {
+  display: grid;
+  grid-template-areas:
+    "head"
+    "shop"
+    "foot";
+  grid-template-rows: auto auto auto;
+}
+
+.homeHeader {
+  grid-area: head;
+}
+.shopSection {
+  grid-area: shop;
+}
+.shopFooter {
+  grid-area: foot;
+}
+
+.shop {
+  display: grid;
+  grid-template-areas: "aside product product";
+  grid-template-rows: auto;
+}
+
+.shopAside {
+  grid-area: aside;
+}
+.shopArticle {
+  grid-area: product;
+}
+
+/* Main */
+
+.main__shop {
+  background-color: var(--bg-solid-2);
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.main__tittle__shop {
+  font-family: var(--base-font);
+  text-align: center;
+  color: var(--secondary-900);
+  font-size: var(--font-medium);
+}
+
+.barraSup {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+.home {
+  background-color: var(--bg-solid-1);
+  color: var(--secondary-900);
+  font-size: var(--font-small);
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  border-radius: 10px;
+  margin-left: 1rem;
+}
+
+/* Main - Ordenar por */
+
+.OrderbyShop {
+  background-color: var(--bg-solid-1);
+  color: var(--secondary-900);
+  font-size: var(--font-small);
+  padding: 0.5rem 0 0.5rem 0.5rem;
+  border-radius: 10px;
+  margin-left: 1rem;
+}
+
+.OrderbyShop option {
+  color: var(--secondary-500);
+  font-size: var(--font-xsmall);
+  font-family: var(--alternative-font);
+}
+
+.OrderbyShop select option:hover {
+  /* Estilo para la opción seleccionada */
+  background-color: var(--bg-solid-4); /* Fondo de la opción seleccionada */
+  color: var(--secondary-900); /* Color del texto de la opción seleccionada */
+}
+
+.shop-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* ASIDE */
+
+.asideShop {
+  background-color: var(--bg-solid-3);
+}
+
+/* formuario */
+
+.formShop {
+  margin: 0 1rem 0 1rem;
+  padding: 2rem 1rem 1rem 1rem;
+  box-sizing: border-box;
+}
+
+.formShop label {
+  font-family: var(--base-font);
+  font-size: var(--font-samll);
+  margin-bottom: 0.5rem;
+  color: var(--secondary-900);
+  font-weight: 800;
+}
+
+.formShop input {
+  font-family: var(--base-font);
+  font-size: var(--font-small);
+  border: 2px solid var(--bg-solid-1);
+  border-radius: 5px;
+  border-color: var(--bg-solid-1);
+  height: 2rem;
+  color: var(--primary-900);
+  padding: 0 0 0 0.5rem;
+}
+
+.formShop input::placeholder {
+  color: var(--primary-300);
+  font-size: var(--font-xsmall);
+  font-family: var(--alternative-font);
+  padding: 0 0 0 0.5rem;
+}
+
+.formShop p {
+  font-family: var(--base-font);
+  font-weight: 500;
+  font-size: var(--font-small);
+  color: var(--primary-900);
+}
+
+#form-precio {
+  border: 2px solid var(--bg-solid-1);
+  border-radius: 6px;
+  font-family: var(--base-font);
+  width: 10rem;
+  font-weight: 500;
+  font-size: var(--font-xsmall);
+  margin: 0 0.25rem 0 0.25rem;
+  color: var(--primary-900);
+  text-align: center;
+}
+
+.sectionsForm {
+  border: 1px solid var(--bg-solid-1);
+  border-radius: 10px;
+  padding: 0.5rem;
+}
+
+.formShop input[type="checkbox"] {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 10px solid var(--bg-solid-2);
+  border-radius: 10px;
+}

@@ -1,0 +1,29 @@
+/* @import url("/assets/css/misc/normalize.css"); */
+
+.main_terminos {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.8),
+      rgba(126, 126, 126, 0.8)
+    ),
+    url(/assets/multimedia/img/flipFlop_front.jpeg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.terminos {
+  display: flex;
+  font-family: var(--base-font);
+  font-size: var(--font-small);
+  color: var(--bg-solid-1);
+  padding-top: var(--spacing-24);
+  padding-bottom: var(--spacing-24);
+  width: 700px;
+  height: auto;
+  margin: 0 auto;
+}
+
+.titulo_terminos {
+  padding-top: var(--spacing-12);
+  padding-bottom: var(--spacing-8);
+}

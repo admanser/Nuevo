@@ -1,0 +1,78 @@
+.card {
+  width: 100%; /* Tamaño fijo para el contenedor principal */
+  background-color: var(--bg-solid-5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--bg-solid-5);
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.card-item__cover {
+  display: flex;
+  width: 100%; /* Tamaño fijo para el contenedor de la imagen */
+  height: 15rem;
+  background-color: var(--secondary-solid);
+  border-radius: 1rem;
+}
+
+.card-item__cover img {
+  animation: fade .7s;
+  border: var(--bg-solid-2) 5px solid;
+  border-radius: 1rem;
+  width: 100%;
+  opacity: 90%;
+  height: 100%;
+  object-fit: cover; /* Ajustar la imagen para que cubra todo el contenedor */
+}
+
+.card-item__img--back {
+  width: auto;
+  display: none;
+}
+
+.card-item__cover:hover .card-item__img--back {
+  display: block;
+}
+
+.card-item__cover:hover .card-item__img--front {
+  display: none;
+}
+
+.card-item__content {
+  width: 100%; /* Tamaño fijo para el contenedor de la información */
+  padding: var(--spacing-16); /* Agregar relleno según sea necesario */
+  box-sizing: border-box; /* Incluir el relleno en el ancho total del contenedor */
+  color: var(--primary-900);
+}
+
+.card-item__name {
+  font-family: var(--base-font);
+  font-size: var(--font-medium);
+  font-weight: 700;
+}
+
+.card-item__price {
+  font-family: var(--alternative-font);
+  font-size: var(--font-small);
+  margin-top: 0.5rem;
+}
+
+.card-item__promo {
+  font-family: var(--alternative-font);
+  font-size: var(--font-xsmall);
+  color: var(--bg-solid-2);
+  font-weight: 700;
+}
+
+.card-item__tag {
+  font-size: var(--font-xsmall);
+  text-transform: uppercase;
+  background-color: var(--bg-solid-4);
+  color: var(--secondary-900);
+  padding: var(--spacing-8)var(--spacing-12);
+  position: absolute;
+  right: 0;
+}
+

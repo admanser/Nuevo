@@ -1,0 +1,408 @@
+/* header {
+  background-color: var(--bg-solid-1);
+  padding: var(--spacing-36);
+  color: var(--secondary-solid);
+  font-family: var(--base-font);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar_logo {
+  max-width: 100%;
+} */
+
+@import url("./normalize.css");
+
+* {
+  font-family: var(--base-font);
+}
+#loginModal {
+  display: none;
+}
+
+/* Formato navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between; /* Distribucion horizontal */
+  align-items: center; /* Alineacion vertical*/
+  background-color: var(--bg-solid-1);
+  background-image: linear-gradient(
+    var(--bg-solid-1),
+    var(--secondary-300)
+  ); /*Efecto degrade*/
+  padding: 10px 20px;
+}
+
+/* Formato logo */
+.Logo img {
+  display: block;
+  width: 100px;
+  height: 90px;
+  margin-left: 30px;
+}
+/*Menu hamburguesa*/
+.menu-icon {
+  display: none;
+  cursor: pointer;
+}
+
+/* Formato menú */
+.menu > ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul > li {
+  display: inline-block;
+  margin-right: 50px;
+}
+
+.menu ul li > a {
+  text-decoration: none;
+  color: var(--secondary-solid);
+}
+
+.menu ul li a:hover {
+  color: var(--bg-solid-3);
+}
+
+/* Formato iniciar sesión */
+.login-link {
+  display: flex;
+  align-items: center;
+}
+
+.login > a {
+  margin-right: 30px;
+  text-decoration: none;
+  color: var(--secondary-solid);
+  background-color: var(--secondary-300);
+  padding: 8px;
+  border-radius: 30px;
+  border: 2px solid var(--secondary-solid);
+  font-size: small;
+}
+
+.login a:hover {
+  background-color: var(--primary-solid);
+}
+
+/*Icon login*/
+.material-symbols-outlined {
+  margin-right: 5px;
+  font-variation-settings: "FILL" 100, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+/*Icon Account*/
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+/* Formato Icon Account */
+#icon_account {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+}
+
+#icon_account span {
+  font-size: 40px;
+}
+
+#icon_account span:hover {
+  border-radius: 50%;
+  background-color: var(--primary-solid);
+  box-shadow: 0 0 5px 2px var(--secondary-500);
+}
+
+#icon_account {
+  display: none;
+}
+
+/*Dropdown account*/
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Formato Dropdown content */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 10px;
+  background-color: var(--secondary-900);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px var(--primary-solid);
+  z-index: 1;
+}
+
+/* Contenido del Dropdown */
+.dropdown-content a {
+  color: var(--primary-solid);
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: var(--primary-300);
+}
+
+/* Muestra el dropdown al hacer click */
+.show {
+  display: block;
+}
+
+/* Ventana Inicio sesion */
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: var(--primary-500);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center; /* Centra horizontalmente */
+  align-items: center; /* Centra verticalmente */
+}
+
+.modal-content {
+  background-color: var(--primary-900);
+  margin: 10% auto;
+  padding: 20px;
+  border: 5px inset var(--secondary-300);
+  width: 50%;
+  background-color: var(--bg-solid-1); /* Color de fondo del navbar */
+  background-image: linear-gradient(var(--secondary-300), var(--bg-solid-1));
+}
+
+.modal-content > h2 {
+  color: var(--secondary-solid);
+  font-size: x-large;
+  text-align: center;
+  padding: 30px;
+}
+
+.modal-content > p {
+  color: var(--secondary-solid);
+  font-size: smaller;
+  text-align: center;
+  padding: 30px;
+}
+
+.modal-content p > a {
+  font-size: medium;
+  text-align: center;
+  padding: 10px;
+}
+
+.close {
+  color: var(--secondary-500);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--primary-solid);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Formato del formulario */
+.formLogin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.formLogin input[type="text"],
+.formLogin input[type="password"] {
+  margin: 10px;
+  padding: 8px;
+  width: 300px;
+  border: 2px solid var(--primary-300);
+}
+
+.formLogin button {
+  background-color: #007bff;
+  color: var(--secondary-solid);
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+  padding: 10px;
+  width: 150px;
+}
+
+.formLogin button:hover {
+  background-color: #0056b3;
+}
+
+/*Responsive DISPOSITIVO con Width < 600px */
+
+@media screen and (max-width: 600px) {
+  .homeHeader > .navbar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .Logo img {
+    width: 70px;
+    height: 65px;
+    margin-right: 10px;
+  }
+  /*Menu hamburguesa*/
+  .menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 85px; /* Ajusta según la altura de tu navbar */
+    right: 0;
+    background-color: var(--primary-300);
+    width: 100%;
+    box-shadow: 0 8px 16px var(--secondary-300);
+    z-index: 1;
+  }
+
+  .menu > ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+
+  .menu ul > li {
+    text-align: left;
+    padding: 5px 10px;
+    list-style: none;
+  }
+
+  .menu ul li > a {
+    display: block;
+    padding: 2px 5px;
+    text-decoration: none;
+    color: var(--secondary-solid);
+    font-size: small;
+  }
+
+  .menu li > a:hover {
+    background-color: var(--secondary-solid);
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  /*Boton Login*/
+  .login {
+    text-align: right;
+    justify-content: right;
+  }
+  .login a {
+    margin-right: 0;
+  }
+  .login a > p {
+    display: none;
+  }
+
+  /*Icon Account*/
+
+  #icon_account {
+    text-align: right;
+    justify-content: right;
+    margin-right: 0;
+  }
+
+  /* Formato Dropdown content */
+  .dropdown-content {
+    right: 0x;
+    z-index: 1;
+    min-width: 120px;
+    background-color: var(--secondary-solid);
+  }
+
+  /* Contenido del Dropdown*/
+  .dropdown-content a {
+    padding: 12px 16px;
+    font-size: small;
+  }
+
+  /*Ventana Inicio de Sesion*/
+  /* .modal {
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+  } */
+
+  .homeHeader > .modal-content,
+  .modal-content {
+    overflow: auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20%;
+    margin-right: 20%;
+    margin-left: 20%;
+    padding: 2px;
+  }
+
+  .homeHeader .modal-content > h2,
+  .modal-content > h2 {
+    font-size: larger;
+    text-align: center;
+    padding: 15px;
+  }
+
+  .homeHeader .modal-content > p,
+  .modal-content > p {
+    font-size: x-small;
+    text-align: center;
+    padding: 15px;
+  }
+  .homeHeader .modal-content p > a,
+  .modal-content p > a {
+    font-size: small;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .close {
+    font-size: 20px;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: var(--primary-solid);
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  /* Formato del formulario Login*/
+  .formLogin {
+    gap: 15px;
+  }
+
+  .formLogin input[type="text"],
+  .formLogin input[type="password"] {
+    margin: 5px;
+    padding: 5px;
+    width: 200px;
+    height: 30px;
+    font-size: x-small;
+  }
+
+  .formLogin button {
+    border-radius: 10px;
+    padding: 8px;
+    width: 100px;
+  }
+}

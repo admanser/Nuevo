@@ -1,0 +1,35 @@
+.carousel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.carousel-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  width: 90%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-item {
+  padding: 1rem;
+}
+
+.hidden {
+  display: none;
+}
+
+#next {
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+#back {
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
