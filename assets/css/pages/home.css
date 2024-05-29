@@ -26,6 +26,7 @@
   position: relative;
   background-color: var(--bg-solid-1);
   color: var(--secondary-900);
+  overflow: hidden;
 }
 
 .hero-content {
@@ -35,7 +36,6 @@
   padding-bottom: var(--spacing-36);
   text-align: center;
   gap: 1rem;
-  max-width: 2000px;
   /* Limitar el crecimiento del hero-content */
   margin: 0 auto;
   /* Centrar el contenido */
@@ -130,6 +130,35 @@ img {
   position: absolute;
   z-index: 1;
   /* Ajusta el valor de z-index según sea necesario */
+}
+
+/* Hero - BannerDolar */
+.bannerDolar {
+  display: flex;
+  flex-direction: row;
+  white-space: nowrap;
+  /* Evitar que el contenido haga un wrap */
+  position: relative;
+}
+
+.bannerDolar h3,
+.bannerDolar p {
+  display: inline-block;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.bannerDolar {
+  padding: 0.5rem;
+  animation: scroll 25s linear infinite;
+}
+
+.bannerTipeDolar {
+  background-color: #128c7e;
+  opacity: 65%;
+  padding: 0.5rem;
+  border-radius: 10px;
+  margin: 0 1rem 0 1rem;
 }
 
 /* Main */
